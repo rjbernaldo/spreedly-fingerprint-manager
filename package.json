@@ -1,0 +1,28 @@
+{
+  "name": "spreedly-fingerprint-manager",
+  "version": "1.0.0",
+  "description": "WIP: Generate a list of spreedly fingerprints",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bin": {
+    "spreedly-fingerprint-manager": "./index.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "node-fetch": "^1.6.3"
+  }
+}
