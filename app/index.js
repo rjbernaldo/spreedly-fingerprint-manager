@@ -47,15 +47,7 @@ const spreedlyTestToken = process.env.SPREEDLY_TEST_TOKEN;
 
 retrieveData(spreedlyUrl, spreedlyTestToken)
   .then((results) => {
-    const csv = json2csv({ 
-      data: results,
-      fields
-    });
-
-    fs.writeFile('file.csv', csv, (err) => {
-      if (err) console.error(err);
-      console.log(`Done! ${results.length}`);
-    });
+    console.log(`Done! ${results.length}`);
   });
 
 function retrieveData(url, sinceToken) {
@@ -75,6 +67,15 @@ function retrieveData(url, sinceToken) {
         const paymentMethods = json.payment_methods;
 
         if (paymentMethods.length === 0) return resolve(paymentMethods);
+
+        const csv = json2csv({ 
+          data: paymentMethods,
+          fields,
+        });
+
+        fs.appendFile('file.csv', csv, (err) => {
+          if (err) console.error(err);
+        });
 
         console.log(paymentMethods[paymentMethods.length - 1].token); // TODO: remove
 
