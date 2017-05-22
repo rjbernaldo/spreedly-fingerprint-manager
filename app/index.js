@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const querystring = require('querystring');
 const json2csv = require('json2csv');
 const fs = require('fs');
+
 const fields = [
   'token',
   'created_at',
