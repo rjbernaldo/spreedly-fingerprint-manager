@@ -23,6 +23,7 @@
   "homepage": "",
   "dependencies": {
     "dotenv": "^4.0.0",
+    "json2csv": "^3.7.3",
     "node-fetch": "^1.6.3"
   }
 }
